@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+Shopping Cart - Plant Disease Detection
+{% endblock pagetitle %}
+
+{% block body %}
+<div class="page-header">
+  <h1>🛒 {{ _('Shopping Cart') }}</h1>
+  <p>{{ _('Review your items before checkout') }}</p>
+</div>
+
+{% if cart_items %}
+<div class="cart-container">
+  <div class="cart-items">
+    {% for item in cart_items %}
+    <div class="cart-item">
+      <img src="{{ item.product.image }}" alt="{{ item.product.name }}" class="cart-item-image">
+      
+      <div class="cart-item-details">
+        <h3>{{ item.product.name }}</h3>
+        <p class="cart-item-description">{{ item.product.description }}</p>
+        <p class="cart-item-price">{{ item.product.currency }}{{ item.product.price }}</p>
+      </div>
+      
+      <div class="cart-item-summary">
+        <p>{{ _('Quantity:') }} {{ item.quantity }}</p>
+        <p class="cart-item-total">{{ item.product.currency }}{{ item.total }}</p>
+      </div>
+    </div>
+    {% endfor %}
+    
+    <div class="cart-total">
+      <h2><span>{{ _('Total:') }}</span> ₹{{ total }}</h2>
+    </div>
+  </div>
+  
+  <div class="action-buttons">
+    <a href="/checkout" class="btn btn-primary">💳 {{ _('Proceed to Checkout') }}</a>
+    <a href="/shop" class="btn btn-secondary">← {{ _('Continue Shopping') }}</a>
+  </div>
+</div>
+{% else %}
+<div class="empty-cart">
+  <div class="empty-cart-icon">🛒</div>
+  <h2>{{ _('Your cart is empty') }}</h2>
+  <p>{{ _('Add some products to get started!') }}</p>
+  <a href="/shop" class="btn btn-primary">{{ _('Browse Products') }}</a>
+</div>
+{% endif %}
+{% endblock body %}

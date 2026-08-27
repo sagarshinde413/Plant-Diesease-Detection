@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+{{ title }} - Detection Results
+{% endblock pagetitle %}
+
+{% block body %}
+<div class="results-container">
+  <div class="result-header">
+    {% if plant_name %}
+    <div class="plant-identification">
+      <h2 class="plant-name">🌿 {{ plant_name }}</h2>
+      {% if plant_scientific_name and plant_scientific_name != plant_name %}
+      <p class="scientific-name"><em>{{ plant_scientific_name }}</em></p>
+      {% endif %}
+    </div>
+    {% endif %}
+    <h1 class="result-title">{{ title }}</h1>
+    <div class="detection-badge">
+      <span>✓ AI-Powered Detection</span>
+    </div>
+  </div>
+
+  <div class="image-section-center">
+    <div class="image-card-center">
+      <h3>📸 Your Uploaded Image</h3>
+      <img src="/{{ uploaded_image }}" alt="Uploaded plant image" onerror="this.src='https://via.placeholder.com/350x350?text=Image+Not+Found'">
+    </div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <h5>
+        <span class="info-icon">📋</span>
+        <span>{{ _('Description') }}</span>
+      </h5>
+      <p>{{ desc }}</p>
+    </div>
+
+    <div class="info-card">
+      <h5>
+        <span class="info-icon">💊</span>
+        <span>{{ _('Treatment & Prevention') }}</span>
+      </h5>
+      <p>{{ prevent }}</p>
+    </div>
+  </div>
+
+  <div class="products-section">
+    <h3>🛒 {{ _('Recommended Products from Our Shop') }}</h3>
+    
+    <div class="products-grid">
+      {% for product in recommended_products %}
+      <div class="product-card">
+        <div class="product-badge">
+          <span>Recommended</span>
+        </div>
+        <img src="{{ product.image }}" alt="{{ product.name }}" class="product-image">
+        <h4 class="product-name">{{ product.name }}</h4>
+        <div class="product-rating">⭐ {{ product.rating }} / 5.0</div>
+        <p class="product-price">{{ product.currency }}{{ product.price }}</p>
+        <p class="product-description">{{ product.description }}</p>
+        <button class="buy-btn" onclick="addToCart('{{ product.id }}')">
+          🛍️ {{ _('Add to Cart') }}
+        </button>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="action-buttons">
+      <a href="/shop" class="btn btn-primary">{{ _('View All Products') }} →</a>
+    </div>
+  </div>
+
+  <div class="action-buttons">
+    <a href="/index" class="btn btn-primary">🔍 {{ _('Detect Another Plant') }}</a>
+    <a href="/cart" class="btn btn-secondary">🛒 {{ _('View Cart') }}</a>
+    <a href="/" class="btn btn-secondary">🏠 {{ _('Go Home') }}</a>
+  </div>
+</div>
+{% endblock body %}
+
+{% block extra_js %}
+<script>
+  function addToCart(productId) {
+    fetch('/add_to_cart', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ product_id: productId, quantity: 1 })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        alert('✅ Product added to cart successfully!');
+      } else {
+        alert('❌ Failed to add product to cart');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('❌ An error occurred');
+    });
+  }
+</script>
+{% endblock extra_js %}

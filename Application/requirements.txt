@@ -1,0 +1,4 @@
+flask>=2.0.0
+requests>=2.27.0
+Flask-Babel>=3.0.0
+deep-translator>=1.11.4

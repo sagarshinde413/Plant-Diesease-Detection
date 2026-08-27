@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+Home - Plant Disease Detection
+{% endblock pagetitle %}
+
+{% block body %}
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">🌿 {{ _('Plant Disease Detection') }}</h1>
+    <p class="hero-subtitle">{{ _('AI-Powered Universal Plant Disease Detection for ALL Plants Worldwide') }}</p>
+    <a href="/index" class="hero-btn">🔍 {{ _('Detect Disease Now') }}</a>
+  </div>
+</section>
+
+<section class="features">
+  <h2 class="section-title">✨ {{ _('Our Features') }}</h2>
+  
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🌍</div>
+      <h4>{{ _('Universal Detection') }}</h4>
+      <p>{{ _('Detect diseases in ANY plant species worldwide using advanced AI technology. From crops to houseplants, we\'ve got you covered!') }}</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">💊</div>
+      <h4>{{ _('Treatment Recommendations') }}</h4>
+      <p>{{ _('Get detailed treatment plans including chemical, biological, and preventive measures to cure your plants effectively.') }}</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-icon">🛒</div>
+      <h4>{{ _('Integrated Shop') }}</h4>
+      <p>{{ _('Buy fertilizers and treatments directly from our shop. No need to search elsewhere - everything you need in one place!') }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h3>🚀 {{ _('Ready to Protect Your Plants?') }}</h3>
+  <p class="cta-text">{{ _('Upload a photo and get instant AI-powered disease detection') }}</p>
+  <a href="/index" class="btn btn-primary">{{ _('Start Detection') }} →</a>
+</section>
+{% endblock body %}

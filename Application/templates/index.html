@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+Detect Disease - Plant Disease Detection
+{% endblock pagetitle %}
+
+{% block body %}
+<div class="detect-container">
+  <div class="page-header">
+    <h1>🔍 {{ _('Detect Plant Disease') }}</h1>
+    <p>{{ _('AI-Powered Detection for ALL Plants Worldwide') }}</p>
+  </div>
+
+  <div class="api-banner">
+    <strong>✨ {{ _('Universal Plant Detection Enabled!') }}</strong>
+    <p>{{ _('This system uses AI to detect diseases in ANY plant species. Upload your plant image to get started.') }}</p>
+  </div>
+
+  <div class="content-grid">
+    <div class="info-card">
+      <h4>ℹ️ {{ _('Detection Info') }}</h4>
+      <ul>
+        <li>{{ _('ALL plant species') }}</li>
+        <li>{{ _('High accuracy AI') }}</li>
+        <li>{{ _('Detailed treatment') }}</li>
+        <li>{{ _('Prevention tips') }}</li>
+      </ul>
+    </div>
+
+    <div class="upload-section">
+      <div class="plant-icon"></div>
+      
+      <form action="/submit" method="POST" enctype="multipart/form-data" id="uploadForm">
+        <div class="file-input-wrapper">
+          <label for="imageInput" class="file-input-label" id="fileLabel">
+            <span>📤 {{ _('Click to Upload Plant Image') }}</span>
+            <br>
+            <small>({{ _('JPG, PNG, JPEG supported') }})</small>
+          </label>
+          <input type="file" name="image" id="imageInput" accept="image/*" required>
+          <div class="file-name" id="fileName"></div>
+        </div>
+
+        <img id="imagePreview" class="image-preview" alt="Preview">
+
+        <button type="submit" class="submit-btn" id="submitBtn" disabled>
+          🔍 {{ _('Detect Disease') }}
+        </button>
+      </form>
+    </div>
+
+    <div class="info-card">
+      <h4>📋 {{ _('How It Works') }}</h4>
+      <ol>
+        <li>{{ _('Upload plant image') }}</li>
+        <li>{{ _('AI analyzes disease') }}</li>
+        <li>{{ _('Get treatment plan') }}</li>
+        <li>{{ _('Buy from our shop') }}</li>
+      </ol>
+      <small>{{ _('Results in 2-5 seconds') }}</small>
+    </div>
+  </div>
+</div>
+
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loading-content">
+    <div class="spinner"></div>
+    <div class="loading-text">🔬 {{ _('Analyzing your plant...') }}</div>
+    <p class="loading-subtext">{{ _('This may take 2-5 seconds') }}</p>
+  </div>
+</div>
+{% endblock body %}
+
+{% block extra_js %}
+<script>
+  const imageInput = document.getElementById('imageInput');
+  const fileLabel = document.getElementById('fileLabel');
+  const fileName = document.getElementById('fileName');
+  const imagePreview = document.getElementById('imagePreview');
+  const submitBtn = document.getElementById('submitBtn');
+  const uploadForm = document.getElementById('uploadForm');
+  const loadingOverlay = document.getElementById('loadingOverlay');
+
+  imageInput.addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    
+    if (file) {
+      fileLabel.classList.add('has-file');
+      fileName.textContent = ` ${file.name}`;
+      fileName.style.display = 'block';
+      
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        imagePreview.src = e.target.result;
+        imagePreview.style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+      
+      submitBtn.disabled = false;
+    }
+  });
+
+  uploadForm.addEventListener('submit', function(e) {
+    if (!imageInput.files[0]) {
+      e.preventDefault();
+      alert('Please select an image first!');
+      return;
+    }
+    
+    loadingOverlay.classList.add('active');
+    submitBtn.disabled = true;
+  });
+
+  fileLabel.addEventListener('dragover', function(e) {
+    e.preventDefault();
+    this.style.borderColor = '#1ea55c';
+    this.style.background = 'linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%)';
+  });
+
+  fileLabel.addEventListener('dragleave', function(e) {
+    e.preventDefault();
+    if (!fileLabel.classList.contains('has-file')) {
+      this.style.borderColor = '#168647';
+      this.style.background = 'linear-gradient(135deg, #f0f9ff 0%, #e0f2f1 100%)';
+    }
+  });
+
+  fileLabel.addEventListener('drop', function(e) {
+    e.preventDefault();
+    const files = e.dataTransfer.files;
+    if (files.length > 0) {
+      imageInput.files = files;
+      imageInput.dispatchEvent(new Event('change'));
+    }
+  });
+</script>
+{% endblock extra_js %}

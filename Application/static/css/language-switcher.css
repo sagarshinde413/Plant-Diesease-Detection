@@ -1,0 +1,39 @@
+/* Language Switcher Styles */
+.language-switcher {
+  display: inline-block;
+}
+
+.language-switcher select {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--white);
+  background: var(--white);
+  color: var(--dark-green);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  outline: none;
+}
+
+.language-switcher select:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255,255,255,0.3);
+}
+
+.language-switcher select:focus {
+  border-color: var(--light-green);
+  box-shadow: 0 0 0 3px rgba(22, 134, 71, 0.2);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .language-switcher {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .language-switcher select {
+    width: 100%;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block pagetitle %}{% endblock pagetitle %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/language-switcher.css') }}">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <div class="nav-brand">
+        <h2>🌿 {{ _('Plant Disease Detection') }}</h2>
+      </div>
+      
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      
+      <div class="nav-links" id="navLinks">
+        <a href="/">{{ _('Home') }}</a>
+        <a href="/index">{{ _('Detect Disease') }}</a>
+        <a href="/shop">{{ _('Shop') }}</a>
+        <a href="/contact">{{ _('Contact Us') }}</a>
+        
+        <div class="language-switcher">
+          <select onchange="changeLanguage(this.value)" id="langSelect">
+            <option value="en" {% if get_locale() == 'en' %}selected{% endif %}>English</option>
+            <option value="hi" {% if get_locale() == 'hi' %}selected{% endif %}>हिंदी</option>
+            <option value="mr" {% if get_locale() == 'mr' %}selected{% endif %}>मराठी</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    {% block body %}{% endblock body %}
+  </div>
+
+  <footer>
+    <p>© 2025 Plant AI. {{ _('All Rights Reserved') }}.</p>
+  </footer>
+
+  <button class="scroll-top" onclick="scrollToTop()" id="scrollTopBtn">↑</button>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function changeLanguage(lang) {
+      window.location.href = '/set_language/' + lang;
+    }
+
+    window.addEventListener('scroll', function() {
+      const scrollTopBtn = document.getElementById('scrollTopBtn');
+      scrollTopBtn.classList.toggle('visible', window.pageYOffset > 300);
+    });
+  </script>
+
+  {% block extra_js %}{% endblock extra_js %}
+</body>
+</html>

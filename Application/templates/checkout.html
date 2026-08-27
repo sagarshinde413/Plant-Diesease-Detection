@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+Checkout - Plant Disease Detection
+{% endblock pagetitle %}
+
+{% block body %}
+<div class="page-header">
+  <h1>💳 {{ _('Checkout') }}</h1>
+  <p>{{ _('Complete your order') }}</p>
+</div>
+
+<div class="checkout-container">
+  <div class="checkout-card">
+    <h3>{{ _('Order Summary') }}</h3>
+    
+    {% for item in cart_items %}
+    <div class="order-item">
+      <span>{{ item.product.name }} x {{ item.quantity }}</span>
+      <span class="order-item-price">₹{{ item.total }}</span>
+    </div>
+    {% endfor %}
+    
+    <div class="order-total">
+      <span>{{ _('Total:') }}</span>
+      <span>₹{{ total }}</span>
+    </div>
+    
+    <form action="/order_success" method="POST" class="checkout-form">
+      <h3>{{ _('Delivery Information') }}</h3>
+      
+      <div class="form-group">
+        <label>{{ _('Full Name') }}</label>
+        <input type="text" name="name" required class="form-input">
+      </div>
+      
+      <div class="form-group">
+        <label>{{ _('Phone Number') }}</label>
+        <input type="tel" name="phone" required class="form-input">
+      </div>
+      
+      <div class="form-group">
+        <label>{{ _('Delivery Address') }}</label>
+        <textarea name="address" required rows="3" class="form-input"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label>{{ _('Payment Method') }}</label>
+        <select name="payment" required class="form-input">
+          <option value="cod">{{ _('Cash on Delivery') }}</option>
+          <option value="online">{{ _('Online Payment') }}</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="btn btn-primary btn-full">
+        🎉 {{ _('Place Order') }}
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock body %}

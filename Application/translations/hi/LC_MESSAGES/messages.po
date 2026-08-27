@@ -1,0 +1,275 @@
+# Hindi translations for Plant Disease Detection
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Language: hi\n"
+
+msgid "Plant Disease Detection"
+msgstr "पौधों की बीमारी का पता लगाना"
+
+msgid "Home"
+msgstr "होम"
+
+msgid "Detect Disease"
+msgstr "बीमारी का पता लगाएं"
+
+msgid "Shop"
+msgstr "दुकान"
+
+msgid "Contact Us"
+msgstr "संपर्क करें"
+
+msgid "AI-Powered Universal Plant Disease Detection for ALL Plants Worldwide"
+msgstr "दुनिया भर के सभी पौधों के लिए AI-संचालित सार्वभौमिक पौधों की बीमारी का पता लगाना"
+
+msgid "Detect Disease Now"
+msgstr "अभी बीमारी का पता लगाएं"
+
+msgid "Our Features"
+msgstr "हमारी विशेषताएं"
+
+msgid "Universal Detection"
+msgstr "सार्वभौमिक पहचान"
+
+msgid "Detect diseases in ANY plant species worldwide using advanced AI technology. From crops to houseplants, we've got you covered!"
+msgstr "उन्नत AI तकनीक का उपयोग करके दुनिया भर में किसी भी पौधे की प्रजाति में बीमारियों का पता लगाएं। फसलों से लेकर घरेलू पौधों तक, हमने आपको कवर किया है!"
+
+msgid "Treatment Recommendations"
+msgstr "उपचार की सिफारिशें"
+
+msgid "Get detailed treatment plans including chemical, biological, and preventive measures to cure your plants effectively."
+msgstr "अपने पौधों को प्रभावी ढंग से ठीक करने के लिए रासायनिक, जैविक और निवारक उपायों सहित विस्तृत उपचार योजनाएं प्राप्त करें।"
+
+msgid "Integrated Shop"
+msgstr "एकीकृत दुकान"
+
+msgid "Buy fertilizers and treatments directly from our shop. No need to search elsewhere - everything you need in one place!"
+msgstr "हमारी दुकान से सीधे उर्वरक और उपचार खरीदें। कहीं और खोजने की जरूरत नहीं - एक ही जगह पर आपको जो कुछ भी चाहिए!"
+
+msgid "Ready to Protect Your Plants?"
+msgstr "अपने पौधों की रक्षा के लिए तैयार हैं?"
+
+msgid "Upload a photo and get instant AI-powered disease detection"
+msgstr "एक फोटो अपलोड करें और तुरंत AI-संचालित बीमारी का पता लगाएं"
+
+msgid "Start Detection"
+msgstr "पहचान शुरू करें"
+
+msgid "Upload Plant Image"
+msgstr "पौधे की छवि अपलोड करें"
+
+msgid "Take a clear photo of the affected plant leaf or part"
+msgstr "प्रभावित पौधे की पत्ती या भाग की स्पष्ट तस्वीर लें"
+
+msgid "Choose Image"
+msgstr "छवि चुनें"
+
+msgid "Analyze Plant"
+msgstr "पौधे का विश्लेषण करें"
+
+msgid "Disease Information"
+msgstr "बीमारी की जानकारी"
+
+msgid "Treatment & Prevention"
+msgstr "उपचार और रोकथाम"
+
+msgid "Recommended Products"
+msgstr "अनुशंसित उत्पाद"
+
+msgid "Add to Cart"
+msgstr "कार्ट में जोड़ें"
+
+msgid "Shopping Cart"
+msgstr "शॉपिंग कार्ट"
+
+msgid "Checkout"
+msgstr "चेकआउट"
+
+msgid "Total"
+msgstr "कुल"
+
+msgid "Place Order"
+msgstr "ऑर्डर दें"
+
+msgid "Order Success"
+msgstr "ऑर्डर सफल"
+
+msgid "Thank you for your order!"
+msgstr "आपके ऑर्डर के लिए धन्यवाद!"
+
+msgid "Continue Shopping"
+msgstr "खरीदारी जारी रखें"
+
+msgid "Contact Information"
+msgstr "संपर्क जानकारी"
+
+msgid "Get in Touch"
+msgstr "संपर्क में रहें"
+
+msgid "Name"
+msgstr "नाम"
+
+msgid "Email"
+msgstr "ईमेल"
+
+msgid "Message"
+msgstr "संदेश"
+
+msgid "Send Message"
+msgstr "संदेश भेजें"
+
+msgid "All Rights Reserved"
+msgstr "सर्वाधिकार सुरक्षित"
+
+msgid "Detect Plant Disease"
+msgstr "पौधे की बीमारी का पता लगाएं"
+
+msgid "AI-Powered Detection for ALL Plants Worldwide"
+msgstr "दुनिया भर के सभी पौधों के लिए AI-संचालित पहचान"
+
+msgid "Universal Plant Detection Enabled!"
+msgstr "सार्वभौमिक पौधे की पहचान सक्षम!"
+
+msgid "This system uses AI to detect diseases in ANY plant species. Upload your plant image to get started."
+msgstr "यह प्रणाली किसी भी पौधे की प्रजाति में बीमारियों का पता लगाने के लिए AI का उपयोग करती है। शुरू करने के लिए अपनी पौधे की छवि अपलोड करें।"
+
+msgid "Detection Info"
+msgstr "पहचान जानकारी"
+
+msgid "ALL plant species"
+msgstr "सभी पौधे की प्रजातियां"
+
+msgid "High accuracy AI"
+msgstr "उच्च सटीकता AI"
+
+msgid "Detailed treatment"
+msgstr "विस्तृत उपचार"
+
+msgid "Prevention tips"
+msgstr "रोकथाम युक्तियाँ"
+
+msgid "Click to Upload Plant Image"
+msgstr "पौधे की छवि अपलोड करने के लिए क्लिक करें"
+
+msgid "JPG, PNG, JPEG supported"
+msgstr "JPG, PNG, JPEG समर्थित"
+
+msgid "How It Works"
+msgstr "यह कैसे काम करता है"
+
+msgid "Upload plant image"
+msgstr "पौधे की छवि अपलोड करें"
+
+msgid "AI analyzes disease"
+msgstr "AI बीमारी का विश्लेषण करता है"
+
+msgid "Get treatment plan"
+msgstr "उपचार योजना प्राप्त करें"
+
+msgid "Buy from our shop"
+msgstr "हमारी दुकान से खरीदें"
+
+msgid "Results in 2-5 seconds"
+msgstr "2-5 सेकंड में परिणाम"
+
+msgid "Analyzing your plant..."
+msgstr "आपके पौधे का विश्लेषण किया जा रहा है..."
+
+msgid "This may take 2-5 seconds"
+msgstr "इसमें 2-5 सेकंड लग सकते हैं"
+
+msgid "Description"
+msgstr "विवरण"
+
+msgid "Recommended Products from Our Shop"
+msgstr "हमारी दुकान से अनुशंसित उत्पाद"
+
+msgid "View All Products"
+msgstr "सभी उत्पाद देखें"
+
+msgid "Detect Another Plant"
+msgstr "दूसरे पौधे का पता लगाएं"
+
+msgid "View Cart"
+msgstr "कार्ट देखें"
+
+msgid "Go Home"
+msgstr "होम पर जाएं"
+
+msgid "Fertilizer & Supplements Shop"
+msgstr "उर्वरक और पूरक दुकान"
+
+msgid "Buy quality products for your plants - All in one place"
+msgstr "अपने पौधों के लिए गुणवत्ता उत्पाद खरीदें - सब एक ही जगह"
+
+msgid "Best for:"
+msgstr "इसके लिए सर्वश्रेष्ठ:"
+
+msgid "Back to Home"
+msgstr "होम पर वापस जाएं"
+
+msgid "Review your items before checkout"
+msgstr "चेकआउट से पहले अपनी वस्तुओं की समीक्षा करें"
+
+msgid "Quantity:"
+msgstr "मात्रा:"
+
+msgid "Proceed to Checkout"
+msgstr "चेकआउट के लिए आगे बढ़ें"
+
+msgid "Your cart is empty"
+msgstr "आपकी कार्ट खाली है"
+
+msgid "Add some products to get started!"
+msgstr "शुरू करने के लिए कुछ उत्पाद जोड़ें!"
+
+msgid "Browse Products"
+msgstr "उत्पाद ब्राउज़ करें"
+
+msgid "Complete your order"
+msgstr "अपना ऑर्डर पूरा करें"
+
+msgid "Order Summary"
+msgstr "ऑर्डर सारांश"
+
+msgid "Delivery Information"
+msgstr "डिलीवरी जानकारी"
+
+msgid "Full Name"
+msgstr "पूरा नाम"
+
+msgid "Phone Number"
+msgstr "फोन नंबर"
+
+msgid "Delivery Address"
+msgstr "डिलीवरी पता"
+
+msgid "Payment Method"
+msgstr "भुगतान विधि"
+
+msgid "Cash on Delivery"
+msgstr "कैश ऑन डिलीवरी"
+
+msgid "Online Payment"
+msgstr "ऑनलाइन भुगतान"
+
+msgid "Order Placed Successfully!"
+msgstr "ऑर्डर सफलतापूर्वक दिया गया!"
+
+msgid "Thank you for your order. We will deliver your products soon!"
+msgstr "आपके ऑर्डर के लिए धन्यवाद। हम जल्द ही आपके उत्पाद वितरित करेंगे!"
+
+msgid "Your order will be delivered within 3-5 business days"
+msgstr "आपका ऑर्डर 3-5 व्यावसायिक दिनों में वितरित किया जाएगा"
+
+msgid "We will contact you shortly to confirm your order"
+msgstr "हम आपके ऑर्डर की पुष्टि के लिए जल्द ही आपसे संपर्क करेंगे"
+
+msgid "Have questions? We're here to help!"
+msgstr "प्रश्न हैं? हम मदद के लिए यहां हैं!"
+
+msgid "Solution:"
+msgstr "समाधान:"
+
+msgid "Try Again"
+msgstr "पुनः प्रयास करें"

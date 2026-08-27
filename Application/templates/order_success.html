@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+Order Success - Plant Disease Detection
+{% endblock pagetitle %}
+
+{% block body %}
+<div class="success-container">
+  <div class="success-card">
+    <div class="success-icon">🎉</div>
+    <h1 class="success-title">{{ _('Order Placed Successfully!') }}</h1>
+    <p class="success-message">{{ _('Thank you for your order. We will deliver your products soon!') }}</p>
+    
+    <div class="success-info">
+      <p>📦 {{ _('Your order will be delivered within 3-5 business days') }}</p>
+      <p>📞 {{ _('We will contact you shortly to confirm your order') }}</p>
+    </div>
+    
+    <div class="action-buttons">
+      <a href="/shop" class="btn btn-primary">{{ _('Continue Shopping') }}</a>
+      <a href="/" class="btn btn-secondary">{{ _('Go Home') }}</a>
+    </div>
+  </div>
+</div>
+{% endblock body %}

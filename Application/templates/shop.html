@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+Shop - Plant Disease Detection
+{% endblock pagetitle %}
+
+{% block body %}
+<div class="page-header">
+  <h1>🛒 {{ _('Fertilizer & Supplements Shop') }}</h1>
+  <p>{{ _('Buy quality products for your plants - All in one place') }}</p>
+</div>
+
+<div class="products-grid">
+  {% for product in products %}
+  <div class="product-card">
+    <div class="product-badge">
+      <span>In Stock: {{ product.stock }}</span>
+    </div>
+    <img src="{{ product.image }}" alt="{{ product.name }}" class="product-image">
+    <h4 class="product-name">{{ product.name }}</h4>
+    <div class="product-rating">⭐ {{ product.rating }} / 5.0</div>
+    <p class="product-price">{{ product.currency }}{{ product.price }}</p>
+    <p class="product-description">{{ product.description }}</p>
+    
+    <div class="product-uses">
+      <strong>{{ _('Best for:') }}</strong>
+      <div class="uses-tags">
+        {% for use in product.uses %}
+        <span class="use-tag">{{ use }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <button class="buy-btn" onclick="addToCart('{{ product.id }}')">
+      🛍️ {{ _('Add to Cart') }}
+    </button>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="action-buttons">
+  <a href="/cart" class="btn btn-primary">🛒 {{ _('View Cart') }}</a>
+  <a href="/" class="btn btn-secondary">← {{ _('Back to Home') }}</a>
+</div>
+{% endblock body %}
+
+{% block extra_js %}
+<script>
+  function addToCart(productId) {
+    fetch('/add_to_cart', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ product_id: productId, quantity: 1 })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        alert('✅ Product added to cart successfully!');
+      } else {
+        alert('❌ Failed to add product to cart');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('❌ An error occurred');
+    });
+  }
+</script>
+{% endblock extra_js %}

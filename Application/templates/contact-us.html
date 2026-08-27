@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+Contact Us - Plant Disease Detection
+{% endblock pagetitle %}
+
+{% block body %}
+<div class="contact-container">
+  <div class="contact-header">
+    <h1>📞 {{ _('Contact Us') }}</h1>
+    <p>{{ _('Have questions? We\'re here to help!') }}</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>Sagar Shinde</h3>
+      <p>AI & Machine Learning Specialist</p>
+
+      <div class="social-links">
+        <a href="mailto:sagarshindess040103@gmail.com" class="social-link" target="_blank">
+          <img src="{{ url_for('static', filename='images/mail.jpeg') }}" alt="Email" class="social-icon">
+          <span class="social-text">sagarshindess040103@gmail.com</span>
+        </a>
+
+        <a href="https://www.instagram.com/me_sagar_shinde/" class="social-link" target="_blank">
+          <img src="{{ url_for('static', filename='images/Instagram.png') }}" alt="Instagram" class="social-icon">
+          <span class="social-text">@me_sagar_shinde</span>
+        </a>
+
+        <a href="https://wa.me/+918766975180" class="social-link" target="_blank">
+          <img src="{{ url_for('static', filename='images/Whatsapp.png') }}" alt="WhatsApp" class="social-icon">
+          <span class="social-text">+91 8766975180</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/sagar-shinde-245793352" class="social-link" target="_blank">
+          <img src="{{ url_for('static', filename='images/Linkedin.png') }}" alt="LinkedIn" class="social-icon">
+          <span class="social-text">Sagar Shinde</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <h3>Vinay Patil</h3>
+      <p>Full Stack & Cloud Developer</p>
+
+      <div class="social-links">
+        <a href="mailto:vinaypatil@gmail.com" class="social-link" target="_blank">
+          <img src="{{ url_for('static', filename='images/mail.jpeg') }}" alt="Email" class="social-icon">
+          <span class="social-text">vinaypatil@gmail.com</span>
+        </a>
+
+        <a href="https://www.instagram.com/vinay.patil_09/" class="social-link" target="_blank">
+          <img src="{{ url_for('static', filename='images/Instagram.png') }}" alt="Instagram" class="social-icon">
+          <span class="social-text">@vinay.patil_09</span>
+        </a>
+
+        <a href="https://wa.me/+917499047277" class="social-link" target="_blank">
+          <img src="{{ url_for('static', filename='images/Whatsapp.png') }}" alt="WhatsApp" class="social-icon">
+          <span class="social-text">+91 7499047277</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/krishna-baldaniya-5547381a1/" class="social-link" target="_blank">
+          <img src="{{ url_for('static', filename='images/Linkedin.png') }}" alt="LinkedIn" class="social-icon">
+          <span class="social-text">Vinay Patil</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}
