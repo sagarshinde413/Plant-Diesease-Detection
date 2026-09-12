@@ -17,7 +17,7 @@ from fallback_detection import get_fallback_result
 
 
 # Google Gemini API Configuration
-GEMINI_API_KEY = "AIzaSyDuK_zP4jZNA6rt7IuYLl0Zn83Nl2O_3to"  # Your Gemini API key
+PLANT_ID_API_KEY = "paste_your_api_key_here"  # Your Gemini API key
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
 
 
